@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Button} from "./components/ui/button/button";
+import {NewComponent} from "./components/ui/newComponent/NewComponent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const onClick = (a: number, b: number) => {
+        return a + b
+    }
+    let car = "bmw"
+    let mark = "e34"
+    let strSum = (car: string, mark: string) => {
+        return car + mark
+    }
+    let num = 15;
+    return (
+        <div className="App">
+            <div>Hello World</div>
+            <NewComponent strSum={strSum} car={car} mark={mark} num={num} onClick={onClick}/>
+            <Button num={num} onClick={onClick} strSum={strSum} car={car} mark={mark}/>
+        </div>
+    );
 }
 
 export default App;
