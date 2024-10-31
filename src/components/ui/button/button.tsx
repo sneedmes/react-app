@@ -9,15 +9,14 @@ type ButtonPropsType = {
     mark: string
 }
 export function Button ({num, onClick, strSum, car, mark}:ButtonPropsType) {
-    // console.log(onClick(num, 11))
-    // console.log(strSum(car, mark))
     const strSumHandler = () => {
-        strSum(car, mark)
+        document.write("<h1>" + strSum(car, mark) + "</h1>")
     }
     return (
         <>
             {/*<div onClick={()=>strSum(car, mark)}></div>*/}
-            <div onClick={strSumHandler}></div>
+            <div className="result"></div>
+            <button onClick={strSumHandler}>Push me</button>
             <div>{num}</div>
             <button>add</button>
         </>

@@ -7,7 +7,6 @@ type NewComponentPropsType = {
     onClick: (a: number, b: number) => void
 }
 export const NewComponent = (props:NewComponentPropsType) => {
-
     console.log(props.strSum(props.car, props.mark));
     return (
         <div>
